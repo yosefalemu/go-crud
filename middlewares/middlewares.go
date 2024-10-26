@@ -2,7 +2,7 @@ package middlewares
 
 import "github.com/gin-gonic/gin"
 
-// This enables us interact with the React Frontend
+// To enable CORS (Cross-Origin Resource Sharing) for our server, we need to add a middleware that sets the necessary headers for CORS
 func CORSMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")

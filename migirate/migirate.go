@@ -8,6 +8,7 @@ import (
 	"github.com/yosefalemu/go-crud/models"
 )
 
+// To load the enviroment variable and connect to the database while the database is changed to the new one
 func init() {
 	initializers.LoadEnvVariables()
 	initializers.ConnectToDB(os.Getenv("DB_DRIVER"), os.Getenv("DB_USER"), os.Getenv("DB_PASSWORD"), os.Getenv("DB_PORT"), os.Getenv("DB_HOST"), os.Getenv("DB_NAME"))
